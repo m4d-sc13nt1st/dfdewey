@@ -31,9 +31,9 @@ class OpenSearchDataStore():
     """Create an OpenSearch client."""
     super().__init__()
     if url:
-      self.client = OpenSearch([url], timeout=30)
+      self.client = OpenSearch([url], timeout=300)
     else:
-      self.client = OpenSearch([{'host': host, 'port': port}], timeout=30)
+      self.client = OpenSearch([{'host': host, 'port': port}], timeout=300)
     self.import_counter = collections.Counter()
     self.import_events = []
 
